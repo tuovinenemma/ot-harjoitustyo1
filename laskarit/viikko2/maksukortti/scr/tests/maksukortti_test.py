@@ -37,4 +37,4 @@ class TestMaksukortti(unittest.TestCase):
 	self.kortti.syo_edullisesti()
 	self.kortti.syo_edullisesti()
 	self.kortti.syo_maukkaasti()
-	self.assertEqual(str(self.kortti), "Kortilla on rahaa 1.5 euroa")
+	self.assertEqual(str(self.kortti), "Kortilla on rahaa 2.5 euroa")
