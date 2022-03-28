@@ -49,7 +49,7 @@ class TestMaksukortti(unittest.TestCase):
         self.kortti.syo_edullisesti()
         self.kortti.syo_edullisesti()
         self.kortti.syo_edullisesti()
-        self.assertEqual(str(self.kortti), "Kortilla on rahaa 0 euroa")
+        self.assertEqual(str(self.kortti), "Kortilla on rahaa 0.0 euroa")
 
 
     def test_syo_maukkaasti_vain_kun_saldoa_oikein(self):
@@ -57,5 +57,5 @@ class TestMaksukortti(unittest.TestCase):
         self.kortti.syo_maukkaasti()
         self.kortti.syo_maukkaasti()
         self.kortti.syo_maukkaasti()
-        self.assertEqual(str(self.kortti), "Kortilla on rahaa 0 euroa")
+        self.assertEqual(str(self.kortti), "Kortilla on rahaa 0.0 euroa")
 
