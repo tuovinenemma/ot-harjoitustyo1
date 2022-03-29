@@ -11,6 +11,8 @@ Mitä teille kuuluu **tänään**? Minulle kuuluu todella hyvää, koska on *aur
 
 [vaatimusmaarittely.md](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/vaatimusmaarittely.md)
 
+[tyoaikakirjanpito.md](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/tuntikirjanpito.md)
+
 
 
 Kuka soi kanelipullan >:( ???
