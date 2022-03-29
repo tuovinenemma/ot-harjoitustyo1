@@ -9,6 +9,8 @@ Mitä teille kuuluu **tänään**? Minulle kuuluu todella hyvää, koska on *aur
 
 [komentorivi.txt](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/laskarit/viikko1/komentorivi.txt)
 
+[vaatimusmaarittely.md](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/vaatimusmaarittely.md)
+
 
 
 Kuka soi kanelipullan >:( ???
