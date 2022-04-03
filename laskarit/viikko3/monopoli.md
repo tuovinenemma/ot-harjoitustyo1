@@ -45,11 +45,11 @@
         vankila()
       }
       class Sattumaruutu{
-        
+        toiminto()
       }
       
       class Yhteismaaruutu{
-        
+        toiminto()
       }
       
      
@@ -69,11 +69,11 @@
       }
       
       class Asema{
-      
+        toiminto()
       }
       
       class Laitos{
-      
+        toiminto()
       }
       
       class Pankkitili{
