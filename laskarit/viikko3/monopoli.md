@@ -1,30 +1,87 @@
 ```mermaid
 
   classDiagram
+    Pelilauta <|-- Pelaaja
+    Pelilauta <|-- Noppa1
+    Pelilauta <|-- Noppa2
+    Pelilauta <|-- Aloitusruutu
+    Pelilauta <|-- Vankila
+    Pelilauta <|-- Sattumaruutu
+    Pelilauta <|-- Yhteismaaruutu
+    Pelilauta <|-- Kadut
+    Pelilauta <|-- Asema
+    Pelilauta <|-- Laitos
+    Sattumaruutu <|-- Sattumakortit
+    Yhteismaaruutu <|-- Yhteismaakortit
+    Pelaaja <|-- Pankkitili
 
     class Pelaaja{
-      id
       nimi
       pelinappula
+      liikuta()
+      ruutu
 
     }
 
     class Pelilauta{
-      id
-      ruutu
-      ruutuseuraava
-
+           
     }
 
       class Noppa1{
-        id
-        tulos
+        heita()
       }
 
-      class Noppa2{
-        id
-        tulos
+      class Noppa2{      
+        heita()
       }
+      
+      class Aloitusruutu{
+        sijainti_x_y
+        aloita()
+      }
+      
+      class Vankila{
+        sijainti_x_y
+        vankila()
+      }
+      class Sattumaruutu{
+        
+      }
+      
+      class Yhteismaaruutu{
+        
+      }
+      
+     
+      class Sattumakortit{
+        toiminto()
+      }
+      
+      class Yhteismaakortit{
+        toiminto()
+      }
+      
+      class Kadut{
+        nimi
+        omistaja
+        rakenna_talo()
+        rakenna_hotelli()
+      }
+      
+      class Asema{
+      
+      }
+      
+      class Laitos{
+      
+      }
+      
+      class Pankkitili{
+        saldo
+        lisaa_rahaa()
+        nosta_rahaa()
+      }
+      
 ```
     
    
