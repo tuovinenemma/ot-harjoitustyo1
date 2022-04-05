@@ -57,7 +57,7 @@ class Pacman:
                 exit()
     
     
-    def nappaimisto(self):            
+    def move_pacman(self):            
         if self.ylos:
             if self.y >0:
                 self.y -= 4
@@ -82,7 +82,7 @@ class Pacman:
 peli = Pacman()
 while True:
     peli.handle_events()
-    peli.nappaimisto()
+    peli.move_pacman()
     peli.nayton_luominen()
     
             
