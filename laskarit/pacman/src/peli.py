@@ -73,6 +73,9 @@ class Pacman:
             if self.x >0:
                 self.x -= 1
                 
+#https://www.google.com/search?q=pacman+png&client=ubuntu&channel=fs&tbm=isch&source=iu&ictx=1&vet=1&fir=93Fx76witA-fsM%252CJhLsJm4wb-nK7M%252C_%253BO3-lXMo2s7jmrM%252CN2v0RNaiyVTd2M%252C_%253BHAZYL6xT8RsYYM%252CE1OxMFWO2VwvsM%252C_%253ByBq6tYBoK4vYTM%252CHZbO3rl-BiNtFM%252C_%253B2uArZ3tjyjxB2M%252COujEZRiWP9HYyM%252C_%253B3MRa_wTfSdjKPM%252CD9r-JFlfiDshmM%252C_%253BWuABiZMtoWVoIM%252CFZDfareVgP_8kM%252C_%253BNF_mZTaiHmf7_M%252CZGTpx05sQgqAxM%252C_%253B0r5CEpIJIO4jSM%252CdnXPedgMXq4-rM%252C_%253BPiPQU1ldH8ap6M%252CfA9ZiSxZiniCpM%252C_%253BF7OVdVXdvpBoiM%252CE3rF3QMHofR1VM%252C_%253B9ygBToAaNVZCKM%252CzgA3t9u_NrQVvM%252C_%253B61E0weVfWSpi5M%252CZDxRk-2c8vsryM%252C_%253BN2NynA_7t7H8tM%252CdAyWY0dKhkgibM%252C_%253BZDIlLzgKjoH2lM%252CJhLsJm4wb-nK7M%252C_&usg=AI4_-kSoo2uyDO9Kwgd-ber3959pHwfWVg&sa=X&ved=2ahUKEwiwyKSp6P32AhWKr4sKHewgDd0Q9QF6BAgfEAE#imgrc=yBq6tYBoK4vYTM
+#kuva 
+                
         
     
     
