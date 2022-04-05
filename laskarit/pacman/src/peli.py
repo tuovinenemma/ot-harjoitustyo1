@@ -5,12 +5,12 @@ class Pacman:
     def __init__(self):
         #pelin alustuksia
         pygame.init()
-        self.naytto = pygame.display.set_mode((840, 680)) 
+        self.naytto = pygame.display.set_mode((1000, 1000)) 
         #ruma pacman en löytänyt parempaa tähän hätään :DD
         self.pacman = pygame.image.load("/home/emtuemtu/ot-harjoitustyo/laskarit/pacman/src/assets/pacman1.png")
         
-        self.x = 0
-        self.y = 680-self.pacman.get_height()
+        self.x = 50
+        self.y = 50
         
         
         self.oikealle = False
@@ -60,18 +60,18 @@ class Pacman:
     def move_pacman(self):            
         if self.ylos:
             if self.y >0:
-                self.y -= 4
+                self.y -= 1
     
         if self.alas:
-            if self.y < 680-self.pacman.get_height():
-                self.y += 4
+            if self.y < 1000-self.pacman.get_height():
+                self.y += 1
         
         if self.oikealle:
-            if self.x <840-self.pacman.get_width():
-                self.x += 4
+            if self.x <1000-self.pacman.get_width():
+                self.x += 1
         if self.vasemmalle:
             if self.x >0:
-                self.x -= 4
+                self.x -= 1
                 
         
     
@@ -79,11 +79,11 @@ class Pacman:
     
 #kutsutaan ohjelmaa
 
-peli = Pacman()
-while True:
-    peli.handle_events()
-    peli.move_pacman()
-    peli.nayton_luominen()
+#peli = Pacman()
+#while True:
+    #peli.handle_events()
+    #peli.move_pacman()
+    #peli.nayton_luominen()
     
             
 
