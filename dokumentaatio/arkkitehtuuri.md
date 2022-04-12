@@ -1,30 +1,42 @@
 ```mermaid
 classDiagram
-  Aloita_peli--|>Vihollinen
-  Aloita_peli--|>Pacman
-  Aloita_peli--|>Taso
+  main<|--Pacman
+  main<|--jono
+  main<|--pelinhallinta
+  main<|--naytto
+  pelinhallinta<|--Pacman
 
-  class Pacman{
-    move_pacman()
+  class main{
+    Pacman()
+    Naytto()
+    Jono()
+    pelinhallinta._aloita_peli()
 
   }
 
-  class Vihollinen{
-    move_ghost()
+  class jono{
+    
 
   }
 
-  class Aloita_peli{
-    nayton_luominen()
+  class pelinhallinta{
+    aloita_peli()
     handle_events()
 
   }
 
-  class Taso{
-
+  class naytto{
+    lataa()
 
   }
 
+   class Pacman{
+  move_pacman()
+  move_ghost()
+  update()
+  lataa_naytto()
+
+  }
 
 
 ```
