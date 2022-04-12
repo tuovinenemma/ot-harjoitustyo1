@@ -28,6 +28,16 @@ poetry run invoke start
 
 ```
 
+## Komentorivitoiminnot
+
+### Ohjelman suorittaminen
+
+Ohjelman pystyy suorittamaan komennolla:
+
+bash
+poetry run invoke start
+
+
 ### Testaus
 
 Testit suoritetaan komennolla:
