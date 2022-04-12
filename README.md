@@ -14,6 +14,8 @@ Pacman peli sokkelopeli, jossa Pac-Man pallo (pelin pelaaja) syö pisteitä . H�
 
 - [arkkitehtuuri.md](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/arkkitehtuuri.md)
 
+- [changelog.md](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/changelog.md)
+
 ## Asennus
 
 1. Asenna riippuvuudet komennolla:
