@@ -82,11 +82,11 @@ class Pacman:
     
 #kutsutaan ohjelmaa
 
-#peli = Pacman()
-#while True:
-    #peli.handle_events()
-    #peli.move_pacman()
-    #peli.nayton_luominen()
+peli = Pacman()
+while True:
+    peli.handle_events()
+    peli.move_pacman()
+    peli.nayton_luominen()
     
             
 
