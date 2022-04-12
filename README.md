@@ -1,13 +1,56 @@
+## Pacman
+
+Pacman peli sokkelopeli, jossa Pac-Man pallo (pelin pelaaja) syö pisteitä . Hänen täytyy vältellä haamuja pelatessaan. Haamuun osuessa hän menettää elämän ja elämien loppuessa peli päättyy. Tavoite on kerätä kaikki pisteet
 
 
+*Dokumentaatiot*
+
+- [gitlog.txt](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/laskarit/viikko1/gitlog.txt)
 
 
-[gitlog.txt](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/laskarit/viikko1/gitlog.txt)
+- [vaatimusmaarittely.md](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/vaatimusmaarittely.md)
 
-[komentorivi.txt](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/laskarit/viikko1/komentorivi.txt)
+- [tyoaikakirjanpito.md](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/tuntikirjanpito.md)
 
-[vaatimusmaarittely.md](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/vaatimusmaarittely.md)
+## Asennus
 
-[tyoaikakirjanpito.md](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/tuntikirjanpito.md)
+1. Asenna riippuvuudet komennolla:
 
+```bash
+poetry install
+```
+
+
+2. Käynnistä sovellus komennolla:
+
+```bash
+poetry run invoke start
+
+```
+
+## Komentorivitoiminnot
+
+### Ohjelman suorittaminen
+
+Ohjelman pystyy suorittamaan komennolla:
+
+```bash
+poetry run invoke start
+```
+
+### Testaus
+
+Testit suoritetaan komennolla:
+
+```bash
+poetry run invoke test
+```
+
+### Testikattavuus
+
+Testikattavuusraportin voi generoida komennolla:
+
+```bash
+poetry run invoke coverage-report
+```
 
