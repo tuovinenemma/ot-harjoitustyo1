@@ -31,3 +31,4 @@ class Pelinhallinta:
                     self._peli.alas = False
             if tapahtuma.type == pygame.QUIT:  # pylint: disable=no-member
                 exit()
+                
