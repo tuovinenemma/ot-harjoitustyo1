@@ -69,6 +69,7 @@ class Pacman:
         if self.oikealle:
             if self.x <1000-self.pacman.get_width():
                 self.x += 1
+                
         if self.vasemmalle:
             if self.x >0:
                 self.x -= 1
@@ -82,11 +83,11 @@ class Pacman:
     
 #kutsutaan ohjelmaa
 
-peli = Pacman()
-while True:
-    peli.handle_events()
-    peli.move_pacman()
-    peli.nayton_luominen()
+#peli = Pacman()
+#while True:
+#    peli.handle_events()
+#    peli.move_pacman()
+#    peli.nayton_luominen()
     
             
 
