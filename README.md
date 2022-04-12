@@ -12,6 +12,20 @@ Pacman peli sokkelopeli, jossa Pac-Man pallo (pelin pelaaja) syö pisteitä . H�
 
 - [tyoaikakirjanpito.md](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/tuntikirjanpito.md)
 
+## Asennus
+
+1. Asenna riippuvuudet komennolla:
+
+```bash
+poetry install
+```
+
+
+2. Käynnistä sovellus komennolla:
+
+```bash
+poetry run invoke start
+
 
 ## Komentorivitoiminnot
 
