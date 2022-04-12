@@ -1,6 +1,8 @@
+**Pacman**
 
 
 
+*Dokumentaatiot*
 
 [gitlog.txt](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/laskarit/viikko1/gitlog.txt)
 
