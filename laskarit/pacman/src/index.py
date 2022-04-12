@@ -1,3 +1,20 @@
-import cowsay
+import pygame
+from pelinhallinta import Pelinhallinta
+from peli import Pacman
+from naytto import Naytto
+from jono import Jono
 
-cowsay.tux("Poetry is awesome!")
+def main():
+    alusta = pygame.display.set_mode((1200, 1000))
+    taso = Pacman(alusta)
+    #naytto = Naytto(taso,Pacman)
+    jono = Jono()
+    peli = Pacman(alusta)
+    pelinhallinta = Pelinhallinta(taso, alusta, jono,peli)
+    pygame.init()
+    pelinhallinta._aloita_peli()
+    
+if __name__=="__main__":
+    main()
+    
+    
