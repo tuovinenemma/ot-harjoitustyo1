@@ -55,6 +55,12 @@ poetry run invoke test
 ### Testikattavuus
 
 Testikattavuusraportin voi generoida komennolla:
+```bash
+install coverage
+```
+```bash
+install invoke
+```
 
 ```bash
 poetry run invoke coverage-report
