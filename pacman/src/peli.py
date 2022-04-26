@@ -7,8 +7,8 @@ class Pacman:
         pygame.init()
         self.state = 'start game'
         self.running = True
-        self.korkeus = 670
-        self.leveys = 610
+        self.korkeus = 500
+        self.leveys = 500
         self.naytto = pygame.display.set_mode((self.korkeus, self.leveys))
         self.kello = pygame.time.Clock()
         self.pacman = pygame.image.load("/home/emtuemtu/ot-harjoitustyo/pacman/src/assets/pacman1.png")
