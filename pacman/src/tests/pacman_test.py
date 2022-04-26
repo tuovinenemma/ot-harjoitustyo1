@@ -23,10 +23,7 @@ class TestPacman(unittest.TestCase):
             self.pacman._move_ghost()
         self.assertNotEqual(str(self.pacman.hy), "100")
         
-    def test_toimiiko_aloitus_naytto(self):
-        self.pacman.run()
-        self.pacman.start_events()
-        self.assertEqual(str(self.pacman.status), "playing")
+
         
         
   
