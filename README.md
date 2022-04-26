@@ -43,6 +43,10 @@ Ohjelman pystyy suorittamaan komennolla:
 ```bash
 poetry run invoke start
 ```
+Muistathan suorittaa komennon poetry shell ympäristössä!
+```bash
+poetry shell
+```
 
 ### Testaus
 
