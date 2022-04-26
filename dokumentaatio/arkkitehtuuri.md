@@ -42,6 +42,31 @@ classDiagram
 ```
 ```mermaid
 
+sequenceDiagram
+participant Main
+participant Pacman
+participant Jono
+participant Pelinhallinta
+
+Main->>Pacman: Pacman()
+activate Pacman
+Pacman->>Pacman: Pacman.run()
+Pacman->>Pacman: Pacman.start_events()
+Pacman->>Pacman: Pacman.start_update()
+Pacman->>Pacman: Pacman.teksti()
+Pacman->>Pacman: Pacman.start_playing()
+Pacman->>Jono: get()
+activate Jono
+Jono->>Pacman: 
+deactivate Jono
+Pacman->>Pelinhallinta: aloita_peli()
+activate Pelinhallinta
+Pelinhallinta->>Pacman: 
+deactivate Pelinhallinta
+Pacman->>Main: exit()
+deactivate Pacman
+
+
 
 
 
