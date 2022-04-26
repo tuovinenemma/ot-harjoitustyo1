@@ -22,7 +22,7 @@ Pacman peli sokkelopeli, jossa Pac-Man pallo (pelin pelaaja) syö pisteitä . H�
 ```bash
 poetry install
 ```
-2. Mene pacman tiedostoon komennolla:
+2. Mene ot-harjoitustyo tiedostosta pacman tiedostoon komennolla:
 ```bash
 cd pacman
 ```
