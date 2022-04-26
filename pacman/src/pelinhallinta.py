@@ -1,11 +1,11 @@
-import pygame, sys
+import sys
+import pygame
 class Pelinhallinta:
-    def __init__(self, taso, alusta, jono, peli):
+    def __init__(self, peli, alusta, jono):
         self._peli = peli
-        self._taso = taso
         self._alusta = alusta
         self._jono = jono
-    def _aloita_peli(self):
+    def aloita_peli(self):
         while True:
             self._handle_events()
             self._peli.update()
