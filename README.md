@@ -22,9 +22,13 @@ Pacman peli sokkelopeli, jossa Pac-Man pallo (pelin pelaaja) syö pisteitä . H�
 ```bash
 poetry install
 ```
+2. Mene pacman tiedoston komennolla:
+```bash
+cd pacman
+```
 
 
-2. Käynnistä sovellus komennolla:
+3. Käynnistä sovellus komennolla:
 
 ```bash
 poetry run invoke start
