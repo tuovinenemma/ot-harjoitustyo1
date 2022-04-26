@@ -3,9 +3,13 @@
     • Perusversion suunnitellut toiminnallisuudet
 	
 	Ennen peliä:
-	- Pelaaja voi aloittaa pelin START-nappia painamalla.
+	- Pelaaja voi aloittaa pelin START-nappia painamalla. "Tehty"
 
-	Pelatessa
+	Pelatessa:
+	-Pacman hahmo. "Tehty"
+	-Haamu hahmo. "Tehty"
+	 -Pacmanin ohjaus näppäinten avulla. "Tehty"
+	 -Haamun satunnanvarainen liikehdintä taustalla. "Tehty"
       - Kentällä liikkuu myös  haamuja, jotka yrittävät saada Pac-Manin kiinni, jos Pac-Man jää    kiinni hän menettää elämän.
       - Elämän menetettyä hän palaa takaisin kulmaan.
       - Jos kaikki elämät on menetetty Pac-Man kuolee ja peli päättyy.
