@@ -2,15 +2,25 @@ import sys
 import pygame
 class Pelinhallinta:
     def __init__(self, peli, alusta, jono):
+        """pelinhallinnan pohjustus
+        Args:
+        peli
+        alusta
+        jono
+        """
         self._peli = peli
         self._alusta = alusta
-        self._jono = jono
+        self.jono = jono
     def aloita_peli(self):
+        """pelin aloitus
+        """
         while True:
             self._handle_events()
             self._peli.update()
     def _handle_events(self):
-        for tapahtuma in self._jono.get():
+        """pelin näppäinten toiminta
+        """
+        for tapahtuma in self.jono.get():
             if tapahtuma.type == pygame.KEYDOWN:  # pylint: disable=no-member
                 if tapahtuma.key == pygame.K_LEFT:  # pylint: disable=no-member
                     self._peli.vasemmalle = True
