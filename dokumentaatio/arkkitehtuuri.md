@@ -1,4 +1,4 @@
-## Käyttöliittymä
+# Käyttöliittymä
 
 Käyttöliittymä sisältää kolme erillistä näkymää:
 
@@ -70,7 +70,7 @@ classDiagram
 ```
 # Pelin kulku
  
- Peli aloitetetaan alkunäytöstä jossa painamalla ENTER-nappia päästään pelin seuraavaan tasoon: pelinäkymään.
+ Peli aloitetetaan alkunäytöstä jossa painamalla SPACE-nappia päästään pelin seuraavaan tasoon: pelinäkymään.
 
 
 ```mermaid
