@@ -8,3 +8,5 @@
 #Viikko 5
 - Peliin luotiin aloitusnäyttö ja sen toiminnallisuus, koodin runkoa muokattiin enemmän käyttäjäystävälliseksi.
 
+#Viikko 6
+- Toiminnallisuus korjattu ja testaus parannettu
