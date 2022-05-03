@@ -8,13 +8,13 @@ Pacman peli sokkelopeli, jossa Pac-Man pallo (pelin pelaaja) syö pisteitä . H�
 
 - [käyttöohje](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/kayttoohje.md)
 
-- [vaatimusmaarittely.md](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/vaatimusmaarittely.md)
+- [vaatimusmaarittely](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/vaatimusmaarittely.md)
 
-- [tyoaikakirjanpito.md](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/tuntikirjanpito.md)
+- [tyoaikakirjanpito](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/tuntikirjanpito.md)
 
-- [arkkitehtuuri.md](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/arkkitehtuuri.md)
+- [arkkitehtuuri](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/arkkitehtuuri.md)
 
-- [changelog.md](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/changelog.md)
+- [changelog](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/changelog.md)
 
 ## Asennus
 
