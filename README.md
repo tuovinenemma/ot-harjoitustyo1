@@ -4,7 +4,7 @@ Pacman peli sokkelopeli, jossa Pac-Man pallo (pelin pelaaja) syö pisteitä . H�
 
 
 *Dokumentaatiot*
-- [release](https://github.com/tuovinenemma/ot-harjoitustyo1/releases/tag/viikko5)
+- [release](https://github.com/tuovinenemma/ot-harjoitustyo1/releases)
 
 - [käyttöohje](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/kayttoohje.md)
 
