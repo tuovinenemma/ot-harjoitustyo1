@@ -19,5 +19,5 @@ poetry run invoke start
 
 # Pelaaminen
 
-Paina ENTER-nappia aloittaaksesi pelin
+Paina SPACE-nappia aloittaaksesi pelin
 
