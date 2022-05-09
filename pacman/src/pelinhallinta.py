@@ -1,5 +1,6 @@
 import sys
 import pygame
+from playerpacman import Pacman
 class Pelinhallinta:
     def __init__(self, peli, alusta, jono):
         """pelinhallinnan pohjustus
@@ -26,7 +27,7 @@ class Pelinhallinta:
 
             elif event.type == KEYDOWN:
                 if event.key == K_UP:
-                    pacman.moveUp = True
+                    .moveUp = True
                     pacman.moveLeft = pacman.moveDown = pacman.moveRight = False
                     pacman.direction = 0
                 elif event.key == K_LEFT:
@@ -59,6 +60,6 @@ class Pelinhallinta:
              #       self._peli.ylos = False
               #  if tapahtuma.key == pygame.K_DOWN:  # pylint: disable=no-member
                #     self._peli.alas = False
-            if tapahtuma.type == pygame.QUIT:  # pylint: disable=no-member
+            if event.type == pygame.QUIT:  # pylint: disable=no-member
                 sys.exit()
                 
