@@ -1,6 +1,6 @@
 import unittest
 import pygame
-from peli import Pacman
+from game import Pacman
 
 
 class TestPacman(unittest.TestCase):
