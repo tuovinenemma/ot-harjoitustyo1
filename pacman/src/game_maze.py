@@ -1,8 +1,4 @@
-
-
 import pygame
-import sys
-import os
 
 class Maze:
     def __init__(self, screen):
