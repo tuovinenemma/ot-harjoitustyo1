@@ -43,7 +43,7 @@ class Maze:
     def _make_maze(self):
         self._all_units.draw(self._screen)
         
-class Coin(pygame.sprite.Sprite):
+class Pellet(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super().__init__()
         image = pygame.Surface((25, 25))
