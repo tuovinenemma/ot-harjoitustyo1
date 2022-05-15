@@ -20,6 +20,8 @@ Alla olevasta linkistä "käyttöohje" voi löytää ohjeita pelin suorittamisee
 
 - [changelog](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/changelog.md)
 
+- [testausdokumentti](https://github.com/tuovinenemma/ot-harjoitustyo1/blob/main/dokumentaatio/testaus.md)
+
 ## Asennus
 
 1. Asenna riippuvuudet komennolla:
