@@ -6,6 +6,10 @@ dirname = os.path.dirname(__file__)
 class Ghosts(pygame.sprite.Sprite):
 
     def __init__(self, speed):
+        """lays tthe foundation for ghosts
+        Args:
+            speed
+        """
         self._ghosts = pygame.image.load(os.path.join(dirname, "..", "assets", "ghost.png"))
         self._ghosts = pygame.transform.smoothscale(self._ghosts, (30, 30))
         self._speed = speed

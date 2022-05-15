@@ -3,6 +3,8 @@ from starting_screen import Start
 import pygame 
 
 def main():
+    """activates the game
+    """
     pygame.init()
     game = Game()
     game._game_running()

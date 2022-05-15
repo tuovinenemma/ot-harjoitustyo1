@@ -4,6 +4,11 @@ dirname = os.path.dirname(__file__)
 
 class Maze:
     def __init__(self, screen):
+        """lays the foundation for the maze
+
+        Args:
+            screen 
+        """
         self._screen = screen
         self._all_units = pygame.sprite.Group()
         self._walls = pygame.sprite.Group()
@@ -15,6 +20,8 @@ class Maze:
         
 
     def _create_maze(self):
+        """creates the maze
+        """
         unit_size = 25
         maze = MAZE_ONE
         width, height = len(maze[0]), len(maze)
@@ -28,10 +35,18 @@ class Maze:
         self._group_units()
 
     def _group_units(self):
-
+        """groups the units
+        """
         self._all_units.add(self._paths, self._walls, self._pellet, self._cherry, self._largepellet, self._strawberry)
 
     def _add_units(self, unit, x, y):
+        """adds units to the maze
+
+        Args:
+            unit 
+            x 
+            y 
+        """
         if unit == 1:
             self._walls.add(Wall(x, y))
         else:
@@ -53,9 +68,16 @@ class Maze:
                 self._strawberry.add(Strawberry(x, y))
 
     def _make_maze(self):
+        """draws the maze
+        """
         self._all_units.draw(self._screen)
                 
 class Pellet(pygame.sprite.Sprite):
+    """draws pellets
+
+    Args:
+        pygame
+    """
     def __init__(self, x, y):
         super().__init__()
         image = pygame.image.load(os.path.join(dirname, "assets", "pellet.png"))
@@ -65,6 +87,11 @@ class Pellet(pygame.sprite.Sprite):
         self.rect.y = y+8
         
 class LargePellet(pygame.sprite.Sprite):
+    """draws large pellets
+
+    Args:
+        pygame
+    """
     def __init__(self, x, y):
         super().__init__()
         image = pygame.image.load(os.path.join(dirname, "assets", "largepellet.png"))
@@ -74,6 +101,11 @@ class LargePellet(pygame.sprite.Sprite):
         self.rect.y = y+2
         
 class Cherry(pygame.sprite.Sprite):
+    """draws cherries
+
+    Args:
+        pygame
+    """
     def __init__(self, x, y):
         super().__init__()
         image = pygame.image.load(os.path.join(dirname, "assets", "cherry.png"))
@@ -82,6 +114,11 @@ class Cherry(pygame.sprite.Sprite):
         self.rect.x = x
         self.rect.y = y+1
 class Strawberry(pygame.sprite.Sprite):
+    """draws strawberries
+
+    Args:
+        pygame
+    """
     def __init__(self, x, y):
         super().__init__()
         image = pygame.image.load(os.path.join(dirname, "assets", "strawberry.png"))
@@ -91,7 +128,11 @@ class Strawberry(pygame.sprite.Sprite):
         self.rect.y = y+1
         
 class Path(pygame.sprite.Sprite):
+    """draws paths
 
+    Args:
+        pygame
+    """
     def __init__(self, x, y):
         super().__init__()
         image = pygame.Surface((25, 25))
@@ -102,7 +143,11 @@ class Path(pygame.sprite.Sprite):
         self.rect.y = y
         
 class Wall(pygame.sprite.Sprite):
-    
+    """draws walls
+
+    Args:
+        pygame
+    """
     def __init__(self, x, y):
         super().__init__()
         image = pygame.Surface((25, 25))
