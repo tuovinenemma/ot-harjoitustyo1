@@ -6,6 +6,11 @@ Käyttöliittymä sisältää kolme erillistä näkymää:
 - Pelaaminen
 - Lopetusnäyttö
 
+Näitä eri osa-alueita pelissä kuvaa sen "state".
+- Start
+- Playing
+- Game over
+
 ```mermaid
 classDiagram
   Aloitusnaytto--|>Peli
@@ -13,14 +18,17 @@ classDiagram
   
   class Aloitusnaytto{
     aloita_peli()
+    state = start
     
    }
   class Peli{
     pelaa()
+    state = playing
   }
   
   class Lopetus{
     lopeta_peli()
+    state = game over
   }
 ```
 
@@ -28,44 +36,60 @@ classDiagram
 
 ```mermaid
 classDiagram
-  main<|--Pacman
-  main<|--jono
-  main<|--pelinhallinta
-  main<|--naytto
-  pelinhallinta<|--Pacman
+  main<|--Game
+  Game<|--Maze
+  Game<|--Game_events
+  Game<|--Pacman
+  Game<|--Ghosts
+  Game<|--Start
+  Game<|--Gameover
 
   class main{
     Pacman()
-    Naytto()
-    Jono()
-    pelinhallinta._aloita_peli()
+    
+    Game_events()
+    start_game()
 
   }
 
-  class jono{
+  class Maze{
+    create_maze()
     
 
   }
 
-  class pelinhallinta{
+  class Game_events{
     aloita_peli()
     handle_events()
 
   }
 
-  class naytto{
-    lataa()
+ 
 
-  }
-
-   class Pacman{
+   class Game{
   move_pacman()
   move_ghost()
   update()
-  lataa_naytto()
+  create_maze()
+
+  }
+  class Pacman{
 
   }
   
+  class Ghosts{
+   
+
+  }
+  
+  class Start{
+   
+
+  }
+  class Gameover{
+   
+
+  }
  
 ```
 # Pelin kulku
@@ -77,27 +101,27 @@ classDiagram
 
 sequenceDiagram
 participant Main
-participant Pacman
-participant Jono
-participant Pelinhallinta
+participant Game
+participant Handle_events
+participant Game_events
 
-Main->>Pacman: Pacman()
-activate Pacman
-Pacman->>Pacman: Pacman.run()
-Pacman->>Pacman: Pacman.start_events()
-Pacman->>Pacman: Pacman.start_update()
-Pacman->>Pacman: Pacman.teksti()
-Pacman->>Pacman: Pacman.start_playing()
-Pacman->>Jono: get()
-activate Jono
-Jono->>Pacman: 
-deactivate Jono
-Pacman->>Pelinhallinta: aloita_peli()
-activate Pelinhallinta
-Pelinhallinta->>Pacman: 
-deactivate Pelinhallinta
-Pacman->>Main: exit()
-deactivate Pacman
+Main->>Game: Game()
+activate Game
+Game->>Game: Game.run()
+Game->>Game: Game.start_events()
+Game->>Game: Game.start_update()
+Game->>Game: Game.teksti()
+Game->>Game: Game.start_playing()
+Game->>Handle_events: get()
+activate Handle_events
+Handle_events->>Game: 
+deactivate Handle_events
+Game->>Game_events: aloita_peli()
+activate Game_events
+Game_events->>Game: 
+deactivate Game_events
+Game->>Main: exit()
+deactivate Game
 
 
 
@@ -106,3 +130,4 @@ deactivate Pacman
 
 
 ```
+
