@@ -1,5 +1,6 @@
 import os
 import pygame
+from random import randint
 from game_maze import *
 from game_events import *
 from game_over import GameOver
@@ -20,14 +21,15 @@ class Game:
         self._height = 875
         self._screen = pygame.display.set_mode((self._width, self._height))
         pygame.display.set_caption("Pacman")
-        self._speed = 5
+        self._speed = 1
         self._maze = Maze(self._screen)
         self._key = "0"
         self._count = 0
         self._lives = 3
         self._high_score = 0
         self._player = Pacman(self._speed)
-        self._ghosts = Ghosts(self._speed)
+        self._ghosts = []
+        self._all_ghosts = pygame.sprite.Group()
         self._events = HandleEvents()
         self._start = Start(self._events, self._clock)
         self._end = GameOver(self._clock, self._events)
@@ -37,7 +39,9 @@ class Game:
         """
         self._maze._create_maze()
         self._screen.blit(self._player._pacman, (self._player.rect.x, self._player.rect.y))
-        self._screen.blit(self._ghosts._ghosts, (self._ghosts.rect.x, self._ghosts.rect.y))
+        self._make_ghosts()
+        for ghost in self._ghosts:
+            self._screen.blit(ghost._ghost, (ghost.rect.x, ghost.rect.y))
         self._game_text2()
         
         pygame.display.update()
@@ -46,17 +50,34 @@ class Game:
     def _render(self):
         """renders the game
         """
+        self._screen.fill((0,0,0))
         pygame.mouse.set_visible(0)  
+        if self._lives == 0:
+            sys.exit()
         self._maze._make_maze()
         self._move_pacman()
         self._eat_largepellet()
         self._eat_pellet()
         self._eat_cherries()
         self._eat_strawberries()
+        self._check_collision_ghost()
         self._screen.blit(self._player._pacman, (self._player.rect.x, self._player.rect.y))
-        self._screen.blit(self._ghosts._ghosts, (self._ghosts.rect.x, self._ghosts.rect.y))
+        for ghost in self._ghosts:
+            self._screen.blit(ghost._ghost, (ghost.rect.x, ghost.rect.y))
         self._game_text2()
+        self._ghosts_can_move()
+    
+    def _check_collision_ghost(self):
         
+        coll = pygame.sprite.spritecollide(self._player, self._all_ghosts, False)
+        if coll:
+            for ghost in coll:
+                self._ghosts.remove(ghost)
+                self._all_ghosts.remove(ghost)
+            self._lives -= 1
+        
+        if self._lives == 0:
+            self._state = "game over"
         
         
     def _move_pacman(self):
@@ -82,6 +103,96 @@ class Game:
         elif self._player.rect.x > 700:
             self._player.rect.x = 0
             self._screen.blit(self._player._pacman, (self._player.rect.x, self._player.rect.y))
+            
+    def _make_ghosts(self):
+        """makes movements for ghosts and checks collision
+        """
+        for x in range(10):
+            ghost = Ghosts(self._speed)
+            self._ghosts.append(ghost)
+            self._all_ghosts.add(ghost)
+            
+    def _move_ghost(self, ghost, direction, opposite=False):
+            speed = 1
+            if opposite:
+                if direction == 1:
+                    ghost.rect.x += speed
+                if direction == 2:
+                    ghost.rect.x -= speed
+                if direction == 3:
+                    ghost.rect.y += speed
+                if direction == 4:
+                    ghost.rect.y -= speed
+            else:
+                if direction == 1:
+                    ghost.rect.x -= speed
+                if direction == 2:
+                    ghost.rect.x += speed
+                if direction == 3:
+                    ghost.rect.y -= speed
+                if direction == 4:
+                    ghost.rect.y += speed
+
+    def _find_direction(self, ghost):
+        dir = self._open_directions(ghost)
+        number = randint(0,1)
+        if ghost._ghost_direction == 0:
+            return dir
+        elif number == 0:
+            return dir
+        return ghost._ghost_direction
+        #self._counter -= 1
+        #return self._direction
+
+    def _ghosts_can_move(self):
+        for ghost in self._ghosts:
+            if ghost.rect.y < 60:
+                ghost.rect.y = 930
+                ghost.rect.x = 390
+            if ghost.rect.y > 930:
+                ghost.rect.y = 60
+                ghost.rect.x = 390
+            dir = self._find_direction(ghost)
+            self._move_ghost(ghost, dir)
+            collision = pygame.sprite.spritecollide(ghost, self._maze._walls, False)
+            if collision:
+                self._move_ghost(ghost, dir, opposite=True)
+                self._move_ghost(ghost, ghost._ghost_direction)
+                collision = pygame.sprite.spritecollide(ghost, self._maze._walls, False)
+                if collision:
+                    self._move_ghost(ghost, ghost._ghost_direction, opposite=True)
+                    ghost._ghost_direction = 0
+                return
+            ghost._ghost_direction = dir
+        
+
+    def _open_directions(self, ghost):
+        turn = self._open_turns(ghost._ghost_direction)
+        for direction in turn:
+            self._move_ghost(ghost, direction)
+            collision = pygame.sprite.spritecollide(ghost, self._maze._walls, False)
+            if not collision:
+                self._move_ghost(ghost, direction, opposite=True)
+                return direction
+            self._move_ghost(ghost, direction, opposite=True)
+        return ghost._ghost_direction
+            
+    def _open_turns(self, direction):
+        number = randint(0,1)
+        if direction == 1:
+            turns = [[3, 4], [4, 3]]
+            return turns[number]
+        elif direction == 2:
+            turns = [[3, 4], [4, 3]]
+            return turns[number]
+        elif direction == 4:
+            turns = [[1, 2], [2, 1]]
+            return turns[number]
+        elif direction == 3:
+            turns = [[1, 2], [2, 1]]
+            return turns[number]
+        elif direction == 0:
+            return [randint(1, 4), randint(1, 4)]
 
         
     def _game_running(self):
@@ -89,13 +200,13 @@ class Game:
         """
         while True:
             if self._state == "start":
-                self._start._start_screen()
+                self._start._start_screen(self._count)
                 self._state = "game"
             if self._state == "game":
                 self._playing()
                 self._state = "game over"
             if self._state == "game over":
-                self._end._end_screen()
+                self._end._end_screen(self._count,)
                 self._state = "start"
                 self._count = 0
                 self._player = Pacman(self._speed)
@@ -117,12 +228,12 @@ class Game:
         """lays the foundation for the game screen text
 
         Args:
-            words 
+            words = str
             screen 
-            pos 
-            size 
-            colour 
-            font_name 
+            pos = x,y
+            size = int
+            colour = rbg
+            font_name = str
         """
         font = pygame.font.SysFont(font_name, size)
         text = font.render(words, False, colour)
@@ -173,9 +284,9 @@ class Game:
             
     
     def _updateScore(self):
-        """keeps and updates the high score
+        """keeps track of the high score and updates it
         Returns:
-            int
+            count = int
         """
         f = open('scores.txt','r')
         file = f.readlines()

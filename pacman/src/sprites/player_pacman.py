@@ -9,14 +9,14 @@ class Pacman(pygame.sprite.Sprite):
         """lays the foundation for player pacman
 
         Args:
-            speed 
-            image 
+            speed = int
+            image = png
         """
         self._pacman = pygame.image.load(os.path.join(dirname, "..", "assets", "pacman.png"))
         self._pacman = pygame.transform.smoothscale(self._pacman, (25, 25))
         self._speed = speed
         self.rect = self._pacman.get_rect()
-        self.rect.x = 325
+        self.rect.x = 323
         self.rect.y = 625
 
     def _move(self, key_pressed, collision=None):
