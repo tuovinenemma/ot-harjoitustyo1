@@ -21,3 +21,27 @@ poetry run invoke start
 
 Paina SPACE-nappia aloittaaksesi pelin
 
+Pelin käynnistyessä tehtäväsi on kerätä erilaisia merkkejä kentältä.
+
+Liikuta hahmoasi käyttäen näppäimistön merkkejä: LEFT, RIGHT, UP, DOWN
+
+Yritä vältellä haamuja kulkiessasi sokkelossa.
+
+Haamuun osuminen vie sinulta yhden elämän.
+
+Elämät voi nähdä vasemmasta alanurkasta.
+
+Elämien loputtua peli loppuu.
+
+Kerätessäsi esineitä pisteesi päivittyvät; voit nähdä nämä vasemmasta ylänurkasta.
+
+Halutessasi lopettaa pelin paina näppäinta "Q" (quit).
+
+Tämä vie sinut loppunäytölle.
+
+Loppunäytöllä voi käynnistää pelin napista "R" (restart) tai lopettaa ohjelman napista "E" (exit).
+
+Painamalla nappia "RESTART" ohjelma vie sinut aloitusnäyttöön.
+
+
+
