@@ -72,4 +72,10 @@ install invoke
 ```bash
 poetry run invoke coverage-report
 ```
+### Pylint
 
+Pylint suoritetaan komennolla:
+
+```bash
+poetry run invoke pylint
+```
