@@ -2,6 +2,10 @@
 
 Pacman peli sokkelopeli, jossa Pac-Man pallo (pelin pelaaja) syö pisteitä . Hänen täytyy vältellä haamuja pelatessaan. Haamuun osuessa hän menettää elämän ja elämien loppuessa peli päättyy. Tavoite on kerätä kaikki pisteet
 
+## Pelin ohje
+
+Alla olevasta linkistä "käyttöohje" voi löytää ohjeita pelin suorittamiseen
+
 
 *Dokumentaatiot*
 - [release](https://github.com/tuovinenemma/ot-harjoitustyo1/releases)
@@ -27,7 +31,6 @@ poetry install
 ```bash
 cd pacman
 ```
-
 
 3. Käynnistä sovellus komennolla:
 
