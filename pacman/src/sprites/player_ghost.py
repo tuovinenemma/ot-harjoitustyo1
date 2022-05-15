@@ -1,5 +1,6 @@
 import pygame
 import os
+from random import randint
 dirname = os.path.dirname(__file__)
 
 class Ghosts(pygame.sprite.Sprite):
@@ -11,3 +12,6 @@ class Ghosts(pygame.sprite.Sprite):
         self.rect = self._ghosts.get_rect()
         self.rect.x = 325
         self.rect.y = 410
+        
+
+        

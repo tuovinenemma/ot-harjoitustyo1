@@ -32,3 +32,4 @@ class Pacman(pygame.sprite.Sprite):
                 self.rect.y -= self._speed
             if key_pressed == "d":
                 self.rect.y += self._speed
+            

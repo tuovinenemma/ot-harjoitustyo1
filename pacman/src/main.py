@@ -1,4 +1,5 @@
 from game import Game
+from starting_screen import Start
 import pygame 
 
 def main():

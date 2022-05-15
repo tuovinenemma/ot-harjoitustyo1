@@ -24,6 +24,12 @@ class HandleEvents:
                     self._key_pressed = "u"
                 if event.key == pygame.K_DOWN:  # pylint: disable=no-member
                     self._key_pressed = "d"
+                if event.key == pygame.K_SPACE:
+                    self._key_pressed = "space"
+                if event.key == pygame.K_q:
+                    self._key_pressed = "quit"
+                if event.key == pygame.K_r:
+                    self._key_pressed = "restart"
                 
             if event.type == pygame.QUIT:  # pylint: disable=no-member
                 sys.exit()
