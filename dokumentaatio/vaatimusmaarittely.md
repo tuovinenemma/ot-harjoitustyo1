@@ -22,6 +22,7 @@
 	Pelin jälkeen:
 	- Pelaaja voi aloittaa pelin RESTART- napista eli "R" tai lopettaa sen EXIT- napista eli "E".
 	- Pelaaja voi nähdä omat pisteensä ja pelin HIGH SCOREN
+	- Jos pelaaja suoritti uusimman HIGH SCOREN tämä tallennetaan tiedostoon seuraavaa peliä varten.
 
 
 	
