@@ -1,26 +1,29 @@
+### Vaatimusmäärittely
 • Sovelluksen tarkoitus: Pacman peli sokkelopeli, jossa Pac-Man pallo (pelin pelaaja) syö pisteitä . Hänen täytyy vältellä haamuja pelatessaan. Haamuun osuessa hän menettää elämän ja elämien loppuessa peli päättyy. Tavoite on kerätä kaikki pisteet.
       
     • Perusversion suunnitellut toiminnallisuudet
 	
 	Ennen peliä:
-	- Pelaaja voi aloittaa pelin START-nappia painamalla. "Tehty"
+	- Pelaaja voi aloittaa pelin SPACE-nappia painamalla.
+	- Pelaaja voi nähdä pelissä suoritetun HIGH SCOREN
 
 	Pelatessa:
-	-Pacman hahmo. "Tehty"
-	-Haamu hahmo. "Tehty"
-	 -Pacmanin ohjaus näppäinten avulla. "Tehty"
-	 -Haamun satunnanvarainen liikehdintä taustalla. "Tehty"
-      - Kentällä liikkuu myös  haamuja, jotka yrittävät saada Pac-Manin kiinni, jos Pac-Man jää    kiinni hän menettää elämän.
-      - Elämän menetettyä hän palaa takaisin kulmaan.
+	-Pacman hahmo. 
+	-Haamut hahmoja. 
+	 -Pacmanin ohjaus näppäinten avulla. 
+	 -Haamun satunnanvarainen liikehdintä taustalla. 
+      - Kentällä liikkuu myös  haamuja, jotka yrittävät saada Pac-Manin kiinni, jos Pac-Man jää   kiinni hän menettää elämän.
+      - Elämän menetettyä hän palaa voi jatkaa pelaamista, jos elämiä on jäljellä.
       - Jos kaikki elämät on menetetty Pac-Man kuolee ja peli päättyy.
-      - Kenttä on läpäisty, kun kaikki pisteet on syöty.
-      - Jokainen kenttä alkaa tilanteesta, jossa aaveet ovat karsinassaan ja Pac-Man sokkelossa hieman niiden alapuolella.
+      - Kenttä on läpäisty, mutta kenttä päivittyy antaen pelaajalle mahdollisuuden rikkoa HIGH SCORE ennätys.
+      - Jokainen kenttä alkaa tilanteesta, jossa aaveet ovat lähtöruudussaan ja Pac-Man sokkelossa hieman niiden alapuolella.
+      - Pelissä on erilaisia kerättäviä symboloita esim. kirsikoita ja mansikoita, jotka antavat Pac Man:ille lisäpisteitä.
 
 	Pelin jälkeen:
-	- Pelaaja voi aloittaa pelin PLAY AGAIN- napista tai lopettaa sen END GAME- napista
+	- Pelaaja voi aloittaa pelin RESTART- napista eli "R" tai lopettaa sen EXIT- napista eli "E".
+	- Pelaaja voi nähdä omat pisteensä ja pelin HIGH SCOREN
 
 
-	Jatkokehitysideoita:
-	- Mahdollisesti eri tasoja pelistä.
-	- Erilaisia kerättäviä symboloita esim. Hedelmiä, jotka antavat Pac-Man:ille vahvuuksia.
-	- Pelaaja voi valita hahmon värin.
+	
+	
+	
